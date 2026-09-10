@@ -526,3 +526,19 @@ footer.site-footer a{color:#dbe4f0;}
 @media (max-width:520px){
   .promo-banner{font-size:.92rem;padding:14px 18px;}
 }
+
+/* ===== v3: additional categories (労働保険/社労士に頼めること/労務相談・トラブル) ===== */
+:root{
+  --c-roken:#4b4fa8;
+  --c-roken-dark:#383c85;
+  --c-tanomeru:#c2486a;
+  --c-tanomeru-dark:#9c3856;
+  --c-soudan:#8a4a42;
+  --c-soudan-dark:#6c3934;
+}
+.cat-roken{background:var(--c-roken);}
+.cat-tanomeru{background:var(--c-tanomeru);}
+.cat-soudan{background:var(--c-soudan);}
+.thumb-roken{background:linear-gradient(135deg,var(--c-roken) 0%,var(--c-roken-dark) 100%);}
+.thumb-tanomeru{background:linear-gradient(135deg,var(--c-tanomeru) 0%,var(--c-tanomeru-dark) 100%);}
+.thumb-soudan{background:linear-gradient(135deg,var(--c-soudan) 0%,var(--c-soudan-dark) 100%);}
