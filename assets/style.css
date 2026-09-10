@@ -356,3 +356,18 @@ footer.site-footer a{color:#dbe4f0;}
   padding-top:6px;
   width:fit-content;
 }
+
+/* ===== real logo (image) ===== */
+.brand-logo{
+  height:34px;
+  width:auto;
+  display:block;
+}
+.hero-logo-img{
+  width:clamp(150px,24vw,300px);
+  height:auto;
+  display:block;
+}
+.hero-logo{
+  text-shadow:none;
+}
