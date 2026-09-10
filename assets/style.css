@@ -337,10 +337,9 @@ footer.site-footer a{color:#dbe4f0;}
 }
 .hero-logo{
   position:absolute;
-  left:3.5%;
-  top:5%;
+  left:2.5%;
+  top:4%;
   line-height:1.2;
-  text-shadow:0 2px 14px rgba(255,255,255,.85), 0 1px 3px rgba(255,255,255,.9);
 }
 .hero-logo-main{
   display:block;
@@ -368,9 +367,10 @@ footer.site-footer a{color:#dbe4f0;}
   display:block;
 }
 .hero-logo-img{
-  width:clamp(72px,10vw,150px);
+  width:clamp(56px,7vw,110px);
   height:auto;
   display:block;
+  filter:drop-shadow(0 1px 6px rgba(255,255,255,.6));
 }
 .hero-logo{
   text-shadow:none;
