@@ -542,3 +542,8 @@ footer.site-footer a{color:#dbe4f0;}
 .thumb-roken{background:linear-gradient(135deg,var(--c-roken) 0%,var(--c-roken-dark) 100%);}
 .thumb-tanomeru{background:linear-gradient(135deg,var(--c-tanomeru) 0%,var(--c-tanomeru-dark) 100%);}
 .thumb-soudan{background:linear-gradient(135deg,var(--c-soudan) 0%,var(--c-soudan-dark) 100%);}
+
+/* ===== v4: CTA box inside articles (バズ部式ボトムコピー) ===== */
+article.post .cta-box{margin-top:40px;}
+article.post .cta-box h2{color:#fff;border-left:none;padding-left:0;margin:0 0 10px;}
+article.post .cta-box p{color:#eafff9;font-size:.95rem;}
