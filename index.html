@@ -208,12 +208,68 @@
   </section>
 
   <section id="contact" style="margin-top:56px;">
-    <div class="cta-box">
-      <h2>社会保険・労務のご相談はお気軽に</h2>
-      <p>給与計算のアウトソーシングや助成金の活用、就業規則の整備など、お気軽にお問い合わせください。</p>
-      <a class="btn" href="mailto:info@example.com">お問い合わせはこちら</a>
+    <div class="contact-wrap">
+      <div class="contact-intro">
+        <span class="cat-badge cat-josei" style="margin-bottom:14px;">無料相談</span>
+        <h2>助成金について、まずは気軽にご相談ください</h2>
+        <p>「うちの会社は対象になる?」「何から準備すればいい?」といった段階でも大丈夫です。助成金の活用はもちろん、給与計算・就業規則・社会保険手続きのご相談もあわせて承ります。</p>
+        <ul class="contact-points">
+          <li>相談だけでもOK、初回のご相談は無料です</li>
+          <li>助成金以外(給与計算・就業規則・労務手続き)のご相談も歓迎</li>
+          <li>横浜市戸塚区を中心に、全国対応可能です</li>
+        </ul>
+      </div>
+      <form class="contact-form" id="contact-form">
+        <label>お名前<span class="req">必須</span>
+          <input type="text" name="name" required placeholder="山田 太郎">
+        </label>
+        <label>会社名
+          <input type="text" name="company" placeholder="株式会社〇〇">
+        </label>
+        <label>メールアドレス<span class="req">必須</span>
+          <input type="email" name="email" required placeholder="you@example.com">
+        </label>
+        <label>ご相談内容
+          <div class="checks">
+            <label class="check-item"><input type="checkbox" name="topic" value="助成金について"> 助成金について</label>
+            <label class="check-item"><input type="checkbox" name="topic" value="給与計算について"> 給与計算について</label>
+            <label class="check-item"><input type="checkbox" name="topic" value="就業規則について"> 就業規則について</label>
+            <label class="check-item"><input type="checkbox" name="topic" value="社会保険手続きについて"> 社会保険手続きについて</label>
+          </div>
+        </label>
+        <label>詳細・ご質問
+          <textarea name="message" rows="4" placeholder="現在の状況やお困りごとなど、わかる範囲でご記入ください"></textarea>
+        </label>
+        <button type="submit" class="btn btn-block">この内容で無料相談を申し込む</button>
+        <p class="contact-note">送信すると、入力内容を記載したメールがお使いのメールソフトで作成されます。内容をご確認のうえ送信してください。</p>
+      </form>
     </div>
   </section>
+
+  <script>
+  document.getElementById('contact-form').addEventListener('submit', function(e){
+    e.preventDefault();
+    var f = e.target;
+    var name = f.name.value.trim();
+    var company = f.company.value.trim();
+    var email = f.email.value.trim();
+    var topics = Array.prototype.slice.call(f.querySelectorAll('input[name="topic"]:checked')).map(function(c){return c.value;}).join('、');
+    var message = f.message.value.trim();
+
+    var bodyLines = [
+      'お名前: ' + name,
+      '会社名: ' + (company || '(未記入)'),
+      'メールアドレス: ' + email,
+      'ご相談内容: ' + (topics || '(未選択)'),
+      '',
+      '詳細・ご質問:',
+      (message || '(未記入)')
+    ];
+    var subject = encodeURIComponent('【無料相談】ホームページからのお問い合わせ');
+    var body = encodeURIComponent(bodyLines.join('\n'));
+    window.location.href = 'mailto:info@example.com?subject=' + subject + '&body=' + body;
+  });
+  </script>
 </main>
 
 <footer class="site-footer">

@@ -371,3 +371,121 @@ footer.site-footer a{color:#dbe4f0;}
 .hero-logo{
   text-shadow:none;
 }
+
+/* ===== contact form ===== */
+.contact-wrap{
+  display:grid;
+  grid-template-columns:1fr 1.1fr;
+  gap:36px;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:36px;
+}
+@media (max-width:760px){
+  .contact-wrap{grid-template-columns:1fr;}
+}
+.contact-intro h2{
+  font-size:1.3rem;
+  line-height:1.6;
+  margin:0 0 14px;
+  color:var(--navy);
+}
+.contact-intro p{
+  color:var(--muted);
+  font-size:.92rem;
+  margin:0 0 18px;
+}
+.contact-points{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.contact-points li{
+  font-size:.88rem;
+  color:var(--ink);
+  padding-left:26px;
+  position:relative;
+}
+.contact-points li::before{
+  content:"✓";
+  position:absolute;
+  left:0;
+  color:var(--teal-dark);
+  font-weight:700;
+}
+.contact-form{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+.contact-form label{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  font-size:.86rem;
+  font-weight:600;
+  color:var(--ink);
+}
+.contact-form .req{
+  color:#c0392b;
+  font-size:.72rem;
+  font-weight:700;
+  background:#fbeae7;
+  padding:1px 6px;
+  border-radius:4px;
+  margin-left:6px;
+}
+.contact-form input[type=text],
+.contact-form input[type=email],
+.contact-form textarea{
+  border:1px solid var(--border);
+  border-radius:6px;
+  padding:10px 12px;
+  font-size:.92rem;
+  font-family:inherit;
+  color:var(--ink);
+  resize:vertical;
+}
+.contact-form input:focus,
+.contact-form textarea:focus{
+  outline:2px solid var(--teal);
+  outline-offset:1px;
+}
+.checks{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+  font-weight:400;
+}
+.check-item{
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  gap:6px;
+  font-size:.86rem;
+  font-weight:400;
+}
+.check-item input{width:auto;}
+.btn-block{
+  display:block;
+  width:100%;
+  border:none;
+  cursor:pointer;
+  background:var(--teal);
+  color:#fff;
+  font-weight:700;
+  font-size:.98rem;
+  padding:14px;
+  border-radius:6px;
+  font-family:inherit;
+}
+.btn-block:hover{opacity:.92;}
+.contact-note{
+  font-size:.76rem;
+  color:#9aa4b0;
+  margin:0;
+}
